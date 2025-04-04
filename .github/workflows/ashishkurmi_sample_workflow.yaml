@@ -6,6 +6,11 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
         uses: ashishkurmi/harden-runner@v2
         with:
@@ -37,6 +42,11 @@ jobs:
     name: build1
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
         uses: ashishkurmi/harden-runner@main
         with:
@@ -68,6 +78,11 @@ jobs:
     name: build2
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
         uses: ashishkurmi/harden-runner@main
         with:
@@ -99,6 +114,11 @@ jobs:
     name: build4
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
         uses: ashishkurmi/harden-runner@main
         with:
